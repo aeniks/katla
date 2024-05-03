@@ -8,7 +8,7 @@ width: 100vw;
 height: 100vh;
 margin: 0;
 overflow: hidden;
-background: black;
+background: ;
 }
 
 body.ready {
@@ -17,10 +17,20 @@ overflow-x: hidden !important;
 }
 
 .scene,
-canvas {background: radial-gradient(circle at top, #4a9593 0%, #a06640 100%); 
+canvas {
+position: fixed;
+inset: 0;
+width: 100%;
+height: 100%;
+outline: none !important;
+}
+
+section {background: radial-gradient(circle at top, #4aff 0%, #a06640 100%); 
 background-size: 400% 400%;
-animation: animationName 52s ease infinite;
-                
+animation: animationName 12s ease infinite;
+height: 100vh;
+width: 100vw;
+mix-blend-mode: color                
 @keyframes animationName {
                     
   0% { background-position: 0% 50%; }
@@ -29,18 +39,8 @@ animation: animationName 52s ease infinite;
                     
   100% { background-position: 0% 50%; }
                   
-};
-position: fixed;
-inset: 0;
-width: 100%;
-height: 100%;
-outline: none !important;
 }
-
-section {
-height: 100vh;
-width: 100vw;
-mix-blend-mode: color-dodge}
+}
 
 section:is(.sec, .sec, .sec) {
 background: #44444444;

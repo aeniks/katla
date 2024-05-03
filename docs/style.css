@@ -17,7 +17,19 @@ overflow-x: hidden !important;
 }
 
 .scene,
-canvas {
+canvas {background: radial-gradient(circle at top, #4a9593 0%, #a06640 100%); 
+background-size: 400% 400%;
+animation: animationName 52s ease infinite;
+                
+@keyframes animationName {
+                    
+  0% { background-position: 0% 50%; }
+                    
+  50% { background-position: 100% 50%; }
+                    
+  100% { background-position: 0% 50%; }
+                  
+};
 position: fixed;
 inset: 0;
 width: 100%;
@@ -28,15 +40,17 @@ outline: none !important;
 section {
 height: 100vh;
 width: 100vw;
-}
+mix-blend-mode: color-dodge}
 
-section:is(.sec-1, .sec-3, .sec-5) {
-background: lightgrey;
+section:is(.sec, .sec, .sec) {
+background: #44444444;
 }
-section:is(.sec-2, .sec-4) {
-background: gainsboro;
+section:is(.sec, .sec) {
+background: #888888;
 }
-
+.sec  {mix-blend-mode:;
+background: radial-gradient(0%, #222222 80% #ffffff88);
+}
 #loading-screen {
 width: 100vw;
 height: 100vh;

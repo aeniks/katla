@@ -4,7 +4,66 @@
 <script type="text/javascript" src="/___vscode_livepreview_injected_script"></script>
 <meta charset="UTF-8" />
 <title>CodePen - Smile - Three.js &amp; ScrollTrigger</title>
-<link rel="stylesheet" href="./style.css" />
+<meta name="description" content="&lt;model-viewer&gt; template" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="style.css" />
+<style>
+html {
+height: 100%;
+}
+
+body {
+margin: 0;
+padding: 0;
+width: 100%;
+height: 444vh;
+overflow-x: hidden;
+}
+/* #mmmm {
+mix-blend-mode: color;
+filter: blur(9px);
+} */
+
+code {
+color: #00000028;
+z-index: -1;
+background-color: #ffffff08;
+mix-blend-mode: screen;
+}
+:not(:defined) > * {
+display: none;
+}
+
+model-viewer {
+mix-blend-mode: exclusion;
+width: 100%;
+height: 100%;
+background-color: #00000008;
+}
+#mmmm {mix-blend-mode: soft-light;
+position: fixed;
+top: 0;
+}
+#over {
+position: absolute;
+top: 0;
+z-index: 22;
+height: 440vh;
+width: 100%;
+background: ;
+mix-blend-mode: overlay;
+}
+#aaaa {
+padding: 222px 0;
+line-height: 4 !important;
+margin: auto;
+display: block;
+width: calc(100%-4vmin);
+border: 2vmin dashed #00ff0028;
+font: 800 22px monospace;
+z-index: 44;
+position: absolute;
+}</style>
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -25,6 +84,59 @@
 <section class="sec" id="s5">
 <p>55</p>
 </section>
+<model-viewer
+id="mmmm"
+src="kkkk.glb"
+ar
+ar-modes="webxr scene-viewer quick-look"
+camera-controls
+camera-orbit="
+calc(15rad - env(window-scroll-y) - 2m) 
+calc(68deg + env(window-scroll-y) * 8deg) 
+calc(5m - env(window-scroll-y) + 19m)
+calc(-60deg 110deg 2m)"
+tone-mapping="commerce"
+poster="poster.webp"
+shadow-intensity="1"
+autoplay>
+<div class="progress-bar hide" slot="progress-bar">
+<div class="update-bar"></div>
+</div>
+<button slot="ar-button" id="ar-button">View in your space</button>
+<div id="ar-prompt">
+<img src="ar_hand_prompt.png" />
+</div>
+</model-viewer>
+<!-- kk -->
+<script>
+(() => {
+  const modelViewer = document.querySelector('#mmmm');
+  const orbitCycle = [
+    '45deg 55deg 4m',
+    '-60deg 110deg 2m',
+    modelViewer.cameraOrbit
+  ];
+
+  setInterval(() => {
+    const currentOrbitIndex = orbitCycle.indexOf(modelViewer.cameraOrbit);
+    modelViewer.cameraOrbit =
+        orbitCycle[(currentOrbitIndex + 1) % orbitCycle.length];
+  }, 1220);
+})();
+</script>
+<model-viewer id="mmmm" camera-controls touch-action="none" camera-orbit="calc(88rad env(window-scroll-y) + 2rad) calc(90deg * env(window-scroll-y) + 92deg) calc(22m - 22m * env(window-scroll-y) * 22m)" src="kkkk.glb" alt="A 3D model of an astronaut" autoplay></model-viewer>
+
+<!-- <model-viewer id="oooo" camera-controls touch-action="none" camera-orbit="calc(.5m - env(window-scroll-y) * 1m) calc(5m - env(window-scroll-y) * 100m)" src="kkkk.glb" alt="A 3D model of an astronaut" autoplay></model-viewer>
+ -->
+<!-- kk -->
+
+<script src="script.js"></script>
+<!-- Loads <model-viewer> for browsers: -->
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+<code id="aaaa">
+gggggg Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio minus quod accusantium quasi vel sapiente autem. Pariatur ratione, architecto facere quo, reprehenderit illo alias aperiam dolorum vel odio perspiciatis facilis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, reiciendis accusamus, temporibus deleniti consequatur ipsa ullam sequi nesciunt facilis impedit aliquid. Sequi dolor soluta nulla dicta deserunt? Nihil, vel nulla!
+<br />
+<br />
 
 <div id="loading-screen">... loading ...</div>
 <!-- partial -->

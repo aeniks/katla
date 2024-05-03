@@ -88,7 +88,7 @@
 		//Load Model
 		let loader = new THREE.GLTFLoader(loadingManager);
 
-		loader.load("https://assets.codepen.io/3831311/scene.gltf", function (gltf) {
+		loader.load("kkkk.glb", function (gltf) {
 			scene.add(gltf.scene);      
 			smiley = gltf.scene.children[0];
 			smiley.scale.set(0.5, 0.5, 0.5);

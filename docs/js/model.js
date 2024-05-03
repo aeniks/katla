@@ -26,27 +26,27 @@
 		scene = new THREE.Scene();
 		//scene.background = new THREE.Color(0xdddddd);
 
-		const fov = 80;
+		const fov = 99;
 
 		const aspect = window.innerWidth / window.innerHeight;
-		const near = 0.9;
-		const far = 1000;
+		const near = 2;
+		const far = 100;
 
 		//Camera setup
 		camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
 
-		camera.position.x = 0.00;
-		camera.position.y = 1.25;
-		camera.position.z = 5.50;
+		camera.position.x = 0;
+		camera.position.y = 0;
+		camera.position.z = 8;
 
     
     
     //Lights setup
-    ambientLight = new THREE.AmbientLight(0x404040, 5, 1000);
+    ambientLight = new THREE.AmbientLight(0xffffff, 4,1000);
 		scene.add(ambientLight);
 
-		directionalLight = new THREE.DirectionalLight(0xffffff, 0.2, 1000);
-		directionalLight.position.set(0, 1, 0);
+		directionalLight = new THREE.DirectionalLight(0xffffff, 4, .1);
+		directionalLight.position.set(2, 2, 2);
 		directionalLight.castShadow = true;
 		scene.add(directionalLight);
 
@@ -91,7 +91,7 @@
 		loader.load("kkkk.glb", function (gltf) {
 			scene.add(gltf.scene);      
 			smiley = gltf.scene.children[0];
-			smiley.scale.set(0.5, 0.5, 0.5);
+			smiley.scale.set(4, 4, 4);
       run();
 			render();     
 		});
@@ -101,13 +101,13 @@
   function run() {
     
     gsap.to(smiley.rotation, {
-      z: "+=6.3",  
+      z: "+=0",  
       duration: 1
     })
     
     gsap.to(smiley.rotation, {
       z: "+=6.3",
-      x: '+=6.3',
+      x: '+=3',
       y: '+=6.3',
       ease: 'none',
       immediateRender: false,
@@ -116,13 +116,14 @@
         trigger: '.sec-1',
         start: 'top top',
         end: 'bottom top',
-        scrub: 0.5,
+        scrub: 5,
         
       }
     })
     
     gsap.to(smiley.position, {
-      z: "+=3.0",
+      x: "+=12.0",
+      y: "+=12.0",
       ease: 'none',
       immediateRender: false,
       scrollTrigger: {
@@ -130,7 +131,7 @@
         trigger: '.sec-2',
         start: 'top top',
         end: 'bottom top',
-        scrub: 0.5,
+        scrub: 15,
         
       }
     })

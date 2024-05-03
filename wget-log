@@ -1,0 +1,12 @@
+URL transformed to HTTPS due to an HSTS policy
+--2024-05-03 17:11:34--  https://aeniks.github.io/
+Resolving aeniks.github.io (aeniks.github.io)... 2606:50c0:8003::153, 2606:50c0:8002::153, 2606:50c0:8001::153, ...
+Connecting to aeniks.github.io (aeniks.github.io)|2606:50c0:8003::153|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 9599 (9,4K) [text/html]
+Saving to: ‘STDOUT’
+
+-                                                         0%[                                                                                                                             ]       0  --.-KB/s               -                                                       100%[============================================================================================================================>]   9,37K  --.-KB/s    in 0s      
+
+2024-05-03 17:11:35 (55,0 MB/s) - written to stdout [9599/9599]
+

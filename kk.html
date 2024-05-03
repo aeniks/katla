@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>&lt;model-viewer&gt; template</title>
+<meta charset="utf-8" />
+<meta name="description" content="&lt;model-viewer&gt; template" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+html {
+height: 100%;
+}
+
+body {
+margin: 0;
+padding: 0;
+width: 100%;
+height: 444vh;
+overflow-x: hidden;
+}
+/* #mmmm {
+mix-blend-mode: color;
+filter: blur(9px);
+} */
+
+code {
+color: #00000028;
+z-index: -1;
+background-color: #ffffff08;
+mix-blend-mode: screen;
+}
+:not(:defined) > * {
+display: none;
+}
+
+model-viewer {
+mix-blend-mode: exclusion;
+width: 100%;
+height: 100%;
+background-color: #00000008;
+}
+#mmmm {
+position: fixed;
+top: 0;
+}
+#over {
+position: absolute;
+top: 0;
+z-index: 22;
+height: 440vh;
+width: 100%;
+background: ;
+mix-blend-mode: overlay;
+}
+#aaaa {
+padding: 222px 0;
+line-height: 4 !important;
+margin: auto;
+display: block;
+width: calc(100%-4vmin);
+border: 2vmin dashed #00ff0028;
+font: 800 22px monospace;
+z-index: 44;
+position: absolute;
+}
+</style>
+</head>
+<body>
+<!-- <model-viewer> HTML element -->
+<model-viewer
+id="mmmm"
+src="kkkk.glb"
+ar
+ar-modes="webxr scene-viewer quick-look"
+camera-controls
+camera-orbit="
+calc(15rad - env(window-scroll-y) - 2m) 
+calc(68deg + env(window-scroll-y) * 8deg) 
+calc(5m - env(window-scroll-y) + 19m)
+calc(-60deg 110deg 2m)"
+tone-mapping="commerce"
+poster="poster.webp"
+shadow-intensity="1"
+autoplay>
+<div class="progress-bar hide" slot="progress-bar">
+<div class="update-bar"></div>
+</div>
+<button slot="ar-button" id="ar-button">View in your space</button>
+<div id="ar-prompt">
+<img src="ar_hand_prompt.png" />
+</div>
+</model-viewer>
+<!-- kk -->
+<script>
+(() => {
+  const modelViewer = document.querySelector('#mmmm');
+  const orbitCycle = [
+    '45deg 55deg 4m',
+    '-60deg 110deg 2m',
+    modelViewer.cameraOrbit
+  ];
+
+  setInterval(() => {
+    const currentOrbitIndex = orbitCycle.indexOf(modelViewer.cameraOrbit);
+    modelViewer.cameraOrbit =
+        orbitCycle[(currentOrbitIndex + 1) % orbitCycle.length];
+  }, 1220);
+})();
+</script>
+<model-viewer id="mmmm" camera-controls touch-action="none" camera-orbit="calc(88rad env(window-scroll-y) + 2rad) calc(90deg * env(window-scroll-y) + 92deg) calc(22m - 22m * env(window-scroll-y) * 22m)" src="kkkk.glb" alt="A 3D model of an astronaut" autoplay></model-viewer>
+
+<!-- <model-viewer id="oooo" camera-controls touch-action="none" camera-orbit="calc(.5m - env(window-scroll-y) * 1m) calc(5m - env(window-scroll-y) * 100m)" src="kkkk.glb" alt="A 3D model of an astronaut" autoplay></model-viewer>
+ -->
+<!-- kk -->
+
+<script src="script.js"></script>
+<!-- Loads <model-viewer> for browsers: -->
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+<code id="aaaa">
+gggggg Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio minus quod accusantium quasi vel sapiente autem. Pariatur ratione, architecto facere quo, reprehenderit illo alias aperiam dolorum vel odio perspiciatis facilis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, reiciendis accusamus, temporibus deleniti consequatur ipsa ullam sequi nesciunt facilis impedit aliquid. Sequi dolor soluta nulla dicta deserunt? Nihil, vel nulla!
+<br />
+<br />
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae, itaque hic dolore at numquam unde natus fugiat incidunt impedit in vero necessitatibus explicabo, veniam esse eligendi provident nemo beatae a. impedit aliquid. Sequi dolor soluta nulla dicta deserunt? Nihil, vel nulla!
+<br />
+<br />
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae, itaque hic dolore at numquam unde natus fugiat incidunt impedit in vero necessitatibus explicabo, veniam esse eligendi provident nemo beatae a. impedit aliquid. Sequi dolor soluta nulla dicta deserunt? Nihil, vel nulla!
+<br />
+<br />
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae, itaque hic dolore at numquam unde natus fugiat incidunt impedit in vero necessitatibus explicabo, veniam esse eligendi provident nemo beatae a. impedit aliquid. Sequi dolor soluta nulla dicta deserunt? Nihil, vel nulla!
+<br />
+<br />
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae, itaque hic dolore at numquam unde natus fugiat incidunt impedit in vero necessitatibus explicabo, veniam esse eligendi provident nemo beatae a. impedit aliquid. Sequi dolor soluta nulla dicta deserunt? Nihil, vel nulla!
+<br />
+<br />
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae, itaque hic dolore at numquam unde natus fugiat incidunt impedit in vero necessitatibus explicabo, veniam esse eligendi provident nemo beatae a. impedit aliquid. Sequi dolor soluta nulla dicta deserunt? Nihil, vel nulla!
+<br />
+<br />
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae, itaque hic dolore at numquam unde natus fugiat incidunt impedit in vero necessitatibus explicabo, veniam esse eligendi provident nemo beatae a. impedit aliquid. Sequi dolor soluta nulla dicta deserunt? Nihil, vel nulla!
+<br />
+<br />
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae, itaque hic dolore at numquam unde natus fugiat incidunt impedit in vero necessitatibus explicabo, veniam esse eligendi provident nemo beatae a.
+</code>
+<div id="over"></div>
+
+<style>
+.progress-bar {
+display: block;
+width: 33%;
+height: 10%;
+max-height: 2%;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate3d(-50%, -50%, 0);
+border-radius: 25px;
+box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.5), 0px 0px 5px 1px rgba(0, 0, 0, 0.6);
+border: 1px solid rgba(255, 255, 255, 0.9);
+background-color: rgba(0, 0, 0, 0.5);
+}
+
+.progress-bar.hide {
+visibility: hidden;
+transition: visibility 0.3s;
+}
+
+.update-bar {
+background-color: rgba(255, 255, 255, 0.9);
+width: 0%;
+height: 100%;
+border-radius: 25px;
+float: left;
+transition: width 0.3s;
+}
+
+#ar-button {
+background-image: url(ar_icon.png);
+background-repeat: no-repeat;
+background-size: 20px 20px;
+background-position: 12px 50%;
+background-color: #fff;
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+white-space: nowrap;
+bottom: 16px;
+padding: 0px 16px 0px 40px;
+font-family: Roboto Regular, Helvetica Neue, sans-serif;
+font-size: 14px;
+color: #4285f4;
+height: 36px;
+line-height: 36px;
+border-radius: 18px;
+border: 1px solid #dadce0;
+}
+
+#ar-button:active {
+background-color: #e8eaed;
+}
+
+#ar-button:focus {
+outline: none;
+}
+
+#ar-button:focus-visible {
+outline: 1px solid #4285f4;
+}
+
+@keyframes circle {
+from {
+transform: translateX(-50%) rotate(0deg) translateX(50px) rotate(0deg);
+}
+to {
+transform: translateX(-50%) rotate(360deg) translateX(50px) rotate(-360deg);
+}
+}
+
+@keyframes elongate {
+from {
+transform: translateX(100px);
+}
+to {
+transform: translateX(-100px);
+}
+}
+
+model-viewer > #ar-prompt {
+position: absolute;
+left: 50%;
+bottom: 60px;
+animation: elongate 2s infinite ease-in-out alternate;
+display: none;
+}
+
+model-viewer[ar-status="session-started"] > #ar-prompt {
+display: block;
+}
+
+model-viewer > #ar-prompt > img {
+animation: circle 4s linear infinite;
+}
+</style>
+</body>
+</html>
